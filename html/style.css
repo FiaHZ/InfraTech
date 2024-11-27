@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: #a2d6e6;
 
   
 }
@@ -144,7 +144,8 @@ html {
 .card {
   width: 100%;
   height: auto;
-  background-color: #caf0f8;
+  background-color: #4a98b5;
+  color: #eff8fb;
   display: flex;
   justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -176,9 +177,6 @@ html {
     gap: 15px;
     padding: 200px;
     margin-top: 5%;
-
-    
-
     
 }
 .title-card {
@@ -187,9 +185,11 @@ html {
   justify-content: center;
   width: 32%;
   padding: 25px;
+  background-color: white;
   /* margin-top: 20px; */
-  box-shadow: 0 9px 14px rgba(4, 0, 255, 0.1);
+  box-shadow: 0 9px 14px rgba(1, 1, 17, 0.374);
   height: 300px;
+  border-radius: 20px;
   
  /*  max-width: 100%; */
 }
@@ -231,11 +231,12 @@ footer {
   margin: 0 10px;
   vertical-align: middle;
 }
-.social-icon img {
-  width: 30px;
-  height: 30px;
+.social-icon a {
+  width: 100px;
+  height: 100px;
   margin: 0 10px;
   vertical-align: middle;
+  
 }
 
 .footer-bottom {
@@ -350,6 +351,7 @@ a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .testimonial-heading h1{
@@ -374,6 +376,7 @@ a{
   align-items: center;
   flex-wrap: wrap;
   width:100%;
+
 }
 .testimonial-box{
   width:500px;
@@ -382,6 +385,7 @@ a{
   padding: 20px;
   margin: 15px;
   cursor: pointer;
+  border-radius: 10px;
 }
 .profile-img{
   width:50px;
@@ -477,7 +481,7 @@ a{
     width: auto;
     padding: 25px;
     /* margin-top: 20px; */
-    box-shadow: 0 9px 14px rgba(4, 0, 255, 0.1);
+    box-shadow: 8px 14px 20px rgba(4, 0, 255, 1);
     height: 300px;
     /* max-width: 100%; */
 }
@@ -528,4 +532,47 @@ a{
 ::selection{
   color: #ffffff;
   background-color: #252525;
+}
+
+@keyframes appear{
+  from{
+    opacity: 0;
+    transform: translateX(-100%)
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px)
+  }
+}
+
+.title-card{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+
+
+
+.testimonial-heading {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes hola{
+  from{
+    opacity: 0;
+    transform: translateX(-100%)
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px)
+  }
+}
+
+.testimonial-box-container{
+  animation: hola linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
